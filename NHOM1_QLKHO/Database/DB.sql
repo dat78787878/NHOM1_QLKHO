@@ -2,7 +2,7 @@ CREATE DATABASE QLKHO
 
 
 CREATE TABLE QLKHO.dbo.Employee (
-  EmployeeCode varchar(10) NOT NULL,
+  EmployeeCode int IDENTITY,
   EmployeeName nvarchar(50) NULL,
   DateOfBirth date NULL,
   PhoneNumber char(10) NULL,
@@ -11,8 +11,8 @@ CREATE TABLE QLKHO.dbo.Employee (
 ON [PRIMARY]
 GO
 
-CREATE TABLE QLKHO.dbo.Producer  (
-  ProducerCode varchar(10) NOT NULL,
+CREATE TABLE QLKHO.dbo.Producer (
+  ProducerCode int IDENTITY,
   ProducerName nvarchar(50) NULL,
   Address nvarchar(50) NULL,
   PhoneNumber char(10) NULL,
@@ -22,9 +22,9 @@ ON [PRIMARY]
 GO
 
 CREATE TABLE QLKHO.dbo.EnterCoupon (
-  EnterCouponCode varchar(10) NOT NULL,
-  CommodityCode varchar(10) NULL,
-  EmployeeCode varchar(10) NULL,
+  EnterCouponCode int IDENTITY,
+  CommodityCode int NULL,
+  EmployeeCode int NULL,
   DateOfImport date NULL,
   NumberOfImport int NULL,
   CONSTRAINT PK_PhieuNhap_EnterCouponCode PRIMARY KEY CLUSTERED (EnterCouponCode)
@@ -32,10 +32,22 @@ CREATE TABLE QLKHO.dbo.EnterCoupon (
 ON [PRIMARY]
 GO
 
+CREATE TABLE QLKHO.dbo.Commodity (
+  CommodityCode int IDENTITY,
+  CommodityName nvarchar(50) NULL,
+  DateOfManufacture date NULL,
+  ExpiryDate date NULL,
+  ProducerCode int NULL,
+  Amount int NULL,
+  CONSTRAINT PK_HangHoa_CommodityCode PRIMARY KEY CLUSTERED (CommodityCode)
+)
+ON [PRIMARY]
+GO
+
 CREATE TABLE QLKHO.dbo.Bill (
-  BillCode varchar(10) NOT NULL,
-  CommodityCode varchar(10) NULL,
-  EmployeeCode varchar(10) NULL,
+  BillCode int IDENTITY,
+  CommodityCode int NULL,
+  EmployeeCode int NULL,
   DateOfExport date NULL,
   NumberOfExport int NULL,
   CONSTRAINT PK_PhieuXuat_BillCode PRIMARY KEY CLUSTERED (BillCode)
@@ -43,14 +55,34 @@ CREATE TABLE QLKHO.dbo.Bill (
 ON [PRIMARY]
 GO
 
-CREATE TABLE QLKHO.dbo.Commodity (
-  CommodityCode varchar(10) NOT NULL,
-  CommodityName nvarchar(50) NULL,
-  DateOfManufacture date NULL/,
-  ExpiryDate  date NULL,
-  ProducerCode varchar(10) NULL,
-  Amount int NULL,
-  CONSTRAINT PK_HangHoa_CommodityCode PRIMARY KEY CLUSTERED (CommodityCode)
-)
-ON [PRIMARY]
+ALTER TABLE QLKHO.dbo.EnterCoupon
+  ADD CONSTRAINT FK_EnterCoupon_Commodity FOREIGN KEY (CommodityCode) REFERENCES dbo.Commodity (CommodityCode)
+GO
+
+ALTER TABLE QLKHO.dbo.EnterCoupon
+  ADD CONSTRAINT FK_EnterCoupon_Employee FOREIGN KEY (EmployeeCode) REFERENCES dbo.Employee (EmployeeCode)
+GO
+
+
+
+ALTER TABLE QLKHO.dbo.Bill
+  ADD CONSTRAINT FK_Bill_Commodity FOREIGN KEY (CommodityCode) REFERENCES dbo.Commodity (CommodityCode)
+GO
+
+ALTER TABLE QLKHO.dbo.Bill
+  ADD CONSTRAINT FK_Bill_Employee FOREIGN KEY (EmployeeCode) REFERENCES dbo.Employee (EmployeeCode)
+GO
+
+ALTER TABLE QLKHO.dbo.Bill
+  ADD CONSTRAINT FK_Bill_Commodity FOREIGN KEY (CommodityCode) REFERENCES dbo.Commodity (CommodityCode)
+GO
+
+ALTER TABLE QLKHO.dbo.Bill
+  ADD CONSTRAINT FK_Bill_Employee FOREIGN KEY (EmployeeCode) REFERENCES dbo.Employee (EmployeeCode)
+GO
+
+
+
+ALTER TABLE QLKHO.dbo.Commodity
+  ADD CONSTRAINT FK_Commodity_Producer FOREIGN KEY (ProducerCode) REFERENCES dbo.Producer (ProducerCode)
 GO

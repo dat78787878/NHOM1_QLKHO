@@ -9,7 +9,7 @@ namespace NHOM1_QLKHO.Models
 {
     class Producer
     {
-        public string ProducerCode { get; set; }
+        public int ProducerCode { get; set; }
         public string ProducerName { get; set; }
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
@@ -21,7 +21,7 @@ namespace NHOM1_QLKHO.Models
 
         public Producer(DataRow dataRow)
         {
-            this.ProducerCode = dataRow["ProducerCode"].ToString();
+            this.ProducerCode = Int32.Parse(dataRow["ProducerCode"].ToString());
             this.ProducerName = dataRow["ProducerName"].ToString();
             this.Address = dataRow["Address"].ToString();
             this.PhoneNumber = dataRow["PhoneNumber"].ToString();

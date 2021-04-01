@@ -9,9 +9,9 @@ namespace NHOM1_QLKHO.Models
 {
     class EnterCoupon
     {
-        public string EnterCouponCode { get; set; }
-        public string CommodityCode { get; set; }
-        public string EmployeeCode { get; set; }
+        public int EnterCouponCode { get; set; }
+        public int CommodityCode { get; set; }
+        public int EmployeeCode { get; set; }
         public DateTime DateOfImport { get; set; }
         public int NumberOfImport { get; set; }
 
@@ -22,10 +22,10 @@ namespace NHOM1_QLKHO.Models
 
         public EnterCoupon(DataRow dataRow)
         {
-            this.EnterCouponCode = dataRow["EnterCouponCode"].ToString();
+            this.EnterCouponCode = Int32.Parse(dataRow["EnterCouponCode"].ToString());
             this.DateOfImport = DateTime.Parse(dataRow["DateOfImport"].ToString());
-            this.CommodityCode = dataRow["CommodityCode"].ToString();
-            this.EmployeeCode = dataRow["EmployeeCode"].ToString();
+            this.CommodityCode = Int32.Parse(dataRow["CommodityCode"].ToString());
+            this.EmployeeCode = Int32.Parse(dataRow["EmployeeCode"].ToString());
             this.NumberOfImport = Int32.Parse(dataRow["NumberOfImport"].ToString());
         }
     }

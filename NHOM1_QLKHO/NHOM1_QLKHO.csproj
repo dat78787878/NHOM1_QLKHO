@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DatAccessLayer\DataProvider.cs" />
     <Compile Include="GUI\fEmployee.cs">
       <SubType>Form</SubType>
@@ -106,10 +105,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Database\" />
+    <Folder Include="DAO\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\DB.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,7 +9,7 @@ namespace NHOM1_QLKHO.Models
 {
     class Bill
     {
-        public string BillCode { get; set; }
+        public int BillCode { get; set; }
         public string CommodityCode { get; set; }
         public string EmployeeCode { get; set; }
         public DateTime DateOfExport { get; set; }
@@ -22,7 +22,7 @@ namespace NHOM1_QLKHO.Models
 
         public Bill(DataRow dataRow)
         {
-            this.BillCode = dataRow["BillCode"].ToString();
+            this.BillCode = Int32.Parse(dataRow["BillCode"].ToString());
             this.DateOfExport = DateTime.Parse(dataRow["DateOfExport"].ToString());
             this.CommodityCode = dataRow["CommodityCode"].ToString();
             this.EmployeeCode = dataRow["EmployeeCode"].ToString();
