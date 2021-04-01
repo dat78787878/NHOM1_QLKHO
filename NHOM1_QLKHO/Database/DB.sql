@@ -46,7 +46,7 @@ GO
 CREATE TABLE QLKHO.dbo.Commodity (
   CommodityCode varchar(10) NOT NULL,
   CommodityName nvarchar(50) NULL,
-  DateOfManufacture date NULL/,
+  DateOfManufacture date NULL,
   ExpiryDate  date NULL,
   ProducerCode varchar(10) NULL,
   Amount int NULL,
