@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DatAccessLayer\DataProvider.cs" />
     <Compile Include="GUI\fBill.cs">
