@@ -1,3 +1,6 @@
+USE QLKHO
+GO
+
 -----------------------BILL------------------------
 CREATE PROCEDURE SP_Bill_GetAll
 AS
@@ -8,16 +11,15 @@ END
 GO
 
 CREATE PROCEDURE SP_Bill_Insert
-  @BillCode VARCHAR(10),
-  @CommodityCode VARCHAR(10),
-  @EmployeeCode VARCHAR(10),
+  @CommodityCode INT,
+  @EmployeeCode INT,
   @DateOfExport DATE,
   @NumberOfExport INT
 AS
 BEGIN
   INSERT INTO Bill
-    (BillCode, CommodityCode, EmployeeCode, DateOfExport, NumberOfExport)
-  VALUES(@BillCode, @CommodityCode,@EmployeeCode, @DateOfExport, @NumberOfExport)
+    (CommodityCode, EmployeeCode, DateOfExport, NumberOfExport)
+  VALUES(@CommodityCode,@EmployeeCode, @DateOfExport, @NumberOfExport)
 END
 GO
 
@@ -31,9 +33,9 @@ END
 GO
 
 CREATE PROCEDURE SP_Bill_Update
-  @BillCode VARCHAR(10),
-  @CommodityCode VARCHAR(10),
-  @EmployeeCode VARCHAR(10),
+  @BillCode INT,
+  @CommodityCode INT,
+  @EmployeeCode INT,
   @DateOfExport DATE,
   @NumberOfExport INT
 AS

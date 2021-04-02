@@ -9,7 +9,7 @@ namespace NHOM1_QLKHO.Models
 {
     class Commodity
     {
-        public string CommodityCode { get; set; }
+        public int CommodityCode { get; set; }
         public string CommodityName { get; set; }
         public DateTime DateOfManufacture { get; set; }
         public DateTime ExpiryDate { get; set; }
@@ -23,7 +23,7 @@ namespace NHOM1_QLKHO.Models
 
         public Commodity(DataRow dataRow)
         {
-            this.CommodityCode = dataRow["EnterCouponCode"].ToString();
+            this.CommodityCode = Int32.Parse(dataRow["CommodityCode"].ToString());
             this.DateOfManufacture = DateTime.Parse(dataRow["DateOfImport"].ToString());
             this.ExpiryDate = DateTime.Parse(dataRow["DateOfImport"].ToString());
             this.CommodityName = dataRow["CommodityCode"].ToString();

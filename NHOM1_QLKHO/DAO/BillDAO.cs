@@ -47,7 +47,7 @@ namespace NHOM1_QLKHO.DAO
             return result > 0;
         }
 
-        public bool Update(string BillCode, string CommodityCode, string EmployeeCode, DateTime DateOfExport, string NumberOfExport)
+        public bool Update(int BillCode, int CommodityCode, int EmployeeCode, DateTime DateOfExport, int NumberOfExport)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("SP_Bill_Update @BillCode , @CommodityCode , @EmployeeCode , @DateOfExport , @NumberOfExport", new object[] { BillCode, CommodityCode, EmployeeCode, DateOfExport, NumberOfExport });
 

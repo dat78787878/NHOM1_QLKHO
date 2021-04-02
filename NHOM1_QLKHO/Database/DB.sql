@@ -76,3 +76,6 @@ GO
 ALTER TABLE QLKHO.dbo.Commodity
   ADD CONSTRAINT FK_Commodity_Producer FOREIGN KEY (ProducerCode) REFERENCES dbo.Producer (ProducerCode)
 GO
+
+
+
