@@ -29,10 +29,21 @@ namespace NHOM1_QLKHO.DAO
             }
             return list;
         }
-
-        public bool Insert(string BillCode, string CommodityCode, string EmployeeCode, DateTime DateOfExport, string NumberOfExport)
+        public bool CheckInsert(int CommodityCode, int EmployeeCode, DateTime DateOfExport, int NumberOfExport)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("SP_Bill_Insert @BillCode , @CommodityCode , @EmployeeCode , @DateOfExport , @NumberOfExport", new object[] { BillCode, CommodityCode, EmployeeCode, DateOfExport, NumberOfExport });
+            List<Bill> list = new List<Bill>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SP_Bill_Insert @CommodityCode , @EmployeeCode , @DateOfExport , @NumberOfExport", new object[] { CommodityCode, EmployeeCode, DateOfExport, NumberOfExport });
+            foreach (DataRow item in data.Rows)
+            {
+                Bill entry = new Bill (item);
+                list.Add(entry);
+            }
+            return list.Count == 0;
+        }
+
+        public bool Insert(int CommodityCode, int EmployeeCode, DateTime DateOfExport, int NumberOfExport)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("SP_Bill_Insert @CommodityCode , @EmployeeCode , @DateOfExport , @NumberOfExport", new object[] { CommodityCode, EmployeeCode, DateOfExport, NumberOfExport });
             return result > 0;
         }
 
