@@ -31,11 +31,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qUẢNLÝPHIẾUXUẤTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hƯỚNGDẪNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đĂNGXUẤTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
@@ -59,19 +59,27 @@
             // quanToolStripMenuItem
             // 
             this.quanToolStripMenuItem.Name = "quanToolStripMenuItem";
-            this.quanToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
+            this.quanToolStripMenuItem.Size = new System.Drawing.Size(141, 20);
             this.quanToolStripMenuItem.Text = "QUẢN LÝ PHIẾU NHẬP";
             // 
             // qUẢNLÝPHIẾUXUẤTToolStripMenuItem
             // 
             this.qUẢNLÝPHIẾUXUẤTToolStripMenuItem.Name = "qUẢNLÝPHIẾUXUẤTToolStripMenuItem";
-            this.qUẢNLÝPHIẾUXUẤTToolStripMenuItem.Size = new System.Drawing.Size(136, 20);
+            this.qUẢNLÝPHIẾUXUẤTToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
             this.qUẢNLÝPHIẾUXUẤTToolStripMenuItem.Text = "QUẢN LÝ PHIẾU XUẤT";
+            this.qUẢNLÝPHIẾUXUẤTToolStripMenuItem.Click += new System.EventHandler(this.qUẢNLÝPHIẾUXUẤTToolStripMenuItem_Click);
+            // 
+            // qUẢNLÝNHÂNVIÊNToolStripMenuItem
+            // 
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Name = "qUẢNLÝNHÂNVIÊNToolStripMenuItem";
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Text = "QUẢN LÝ NHÂN VIÊN";
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Click += new System.EventHandler(this.qUẢNLÝNHÂNVIÊNToolStripMenuItem_Click);
             // 
             // qUẢNLÝHÀNGTRONGKHOToolStripMenuItem
             // 
             this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem.Name = "qUẢNLÝHÀNGTRONGKHOToolStripMenuItem";
-            this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem.Size = new System.Drawing.Size(183, 20);
+            this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem.Size = new System.Drawing.Size(185, 20);
             this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem.Text = "THỐNG KÊ HÀNG TRONG KHO";
             // 
             // hƯỚNGDẪNToolStripMenuItem
@@ -83,7 +91,7 @@
             // đĂNGXUẤTToolStripMenuItem
             // 
             this.đĂNGXUẤTToolStripMenuItem.Name = "đĂNGXUẤTToolStripMenuItem";
-            this.đĂNGXUẤTToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.đĂNGXUẤTToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.đĂNGXUẤTToolStripMenuItem.Text = "ĐĂNG XUẤT";
             // 
             // label1
@@ -95,13 +103,6 @@
             this.label1.Size = new System.Drawing.Size(251, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ KHO HÀNG HÓA";
-            // 
-            // qUẢNLÝNHÂNVIÊNToolStripMenuItem
-            // 
-            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Name = "qUẢNLÝNHÂNVIÊNToolStripMenuItem";
-            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
-            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Text = "QUẢN LÝ NHÂN VIÊN";
-            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Click += new System.EventHandler(this.qUẢNLÝNHÂNVIÊNToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -117,7 +118,7 @@
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

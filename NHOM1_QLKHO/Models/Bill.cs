@@ -10,8 +10,8 @@ namespace NHOM1_QLKHO.Models
     class Bill
     {
         public int BillCode { get; set; }
-        public string CommodityCode { get; set; }
-        public string EmployeeCode { get; set; }
+        public int CommodityCode { get; set; }
+        public int EmployeeCode { get; set; }
         public DateTime DateOfExport { get; set; }
         public int NumberOfExport { get; set; }
 
@@ -23,9 +23,9 @@ namespace NHOM1_QLKHO.Models
         public Bill(DataRow dataRow)
         {
             this.BillCode = Int32.Parse(dataRow["BillCode"].ToString());
+            this.CommodityCode = Int32.Parse(dataRow["CommodityCode"].ToString());
+            this.EmployeeCode = Int32.Parse(dataRow["EmployeeCode"].ToString());
             this.DateOfExport = DateTime.Parse(dataRow["DateOfExport"].ToString());
-            this.CommodityCode = dataRow["CommodityCode"].ToString();
-            this.EmployeeCode = dataRow["EmployeeCode"].ToString();
             this.NumberOfExport = Int32.Parse(dataRow["NumberOfExport"].ToString());
         }
     }

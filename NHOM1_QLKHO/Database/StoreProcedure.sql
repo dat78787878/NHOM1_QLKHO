@@ -1,4 +1,4 @@
-CREATE DATABASE QLKHO
+﻿CREATE DATABASE QLKHO
 go
 
 CREATE TABLE QLKHO.dbo.Employee (
@@ -75,4 +75,82 @@ GO
 
 ALTER TABLE QLKHO.dbo.Commodity
   ADD CONSTRAINT FK_Commodity_Producer FOREIGN KEY (ProducerCode) REFERENCES dbo.Producer (ProducerCode)
+GO
+
+-----------------------Thiệp BILL------------------------
+CREATE PROCEDURE SP_Bill_GetAll
+AS
+BEGIN
+  SELECT *
+  FROM Bill
+END
+GO
+
+CREATE PROCEDURE SP_Bill_Insert
+  @CommodityCode INT,
+  @EmployeeCode INT,
+  @DateOfExport DATE,
+  @NumberOfExport INT
+AS
+BEGIN
+  INSERT INTO Bill
+    (CommodityCode, EmployeeCode, DateOfExport, NumberOfExport)
+  VALUES(@CommodityCode,@EmployeeCode, @DateOfExport, @NumberOfExport)
+END
+GO
+
+CREATE PROCEDURE SP_Bill_Delete
+  @BillCode INT
+AS
+BEGIN
+  DELETE Bill
+  WHERE BillCode = @BillCode
+END
+GO
+
+CREATE PROCEDURE SP_Bill_Update
+  @BillCode INT,
+  @CommodityCode INT,
+  @EmployeeCode INT,
+  @DateOfExport DATE,
+  @NumberOfExport INT
+AS
+BEGIN
+  UPDATE Bill
+  SET CommodityCode = @CommodityCode,
+	  EmployeeCode = @EmployeeCode,
+	  DateOfExport = @DateOfExport,
+	  NumberOfExport = @NumberOfExport
+  WHERE BillCode = @BillCode
+END
+GO
+
+CREATE PROCEDURE SP_Bill_Search
+  @searchValue NVARCHAR(200)
+AS
+BEGIN
+  SELECT *
+  FROM Bill
+  WHERE BillCode LIKE N'%' + @searchValue + '%'
+    OR  CommodityCode LIKE N'%' + @searchValue + '%'
+    OR  EmployeeCode LIKE N'%' + @searchValue + '%'
+    OR  DateOfExport LIKE N'%' + @searchValue + '%'
+    OR  NumberOfExport LIKE N'%' + @searchValue + '%'
+END
+GO
+
+CREATE PROCEDURE SP_Employee_GetAll
+AS
+BEGIN
+  SELECT *
+  FROM Employee
+END
+GO
+
+CREATE PROCEDURE SP_Commodity_GetAll
+AS
+BEGIN
+  SELECT *
+  FROM Commodity
+END
 GO
