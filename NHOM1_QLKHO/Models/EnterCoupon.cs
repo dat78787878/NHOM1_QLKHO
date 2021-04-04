@@ -23,7 +23,7 @@ namespace NHOM1_QLKHO.Models
         public EnterCoupon(DataRow dataRow)
         {
             this.EnterCouponCode = Int32.Parse(dataRow["EnterCouponCode"].ToString());
-            this.DateOfImport = DateTime.Parse(dataRow["DateOfImport"].ToString());
+            this.DateOfImport = DateTime.Parse(dataRow["dateOfImport"].ToString());
             this.CommodityCode = Int32.Parse(dataRow["CommodityCode"].ToString());
             this.EmployeeCode = Int32.Parse(dataRow["EmployeeCode"].ToString());
             this.NumberOfImport = Int32.Parse(dataRow["NumberOfImport"].ToString());

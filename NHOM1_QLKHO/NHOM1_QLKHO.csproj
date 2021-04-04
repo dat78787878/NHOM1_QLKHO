@@ -46,12 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CommodityDAO.cs" />
+    <Compile Include="DAO\EmployeeDAO.cs" />
+    <Compile Include="DAO\EnterCouponDAO.cs" />
     <Compile Include="DatAccessLayer\DataProvider.cs" />
     <Compile Include="GUI\fEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\fEmployee.Designer.cs">
       <DependentUpon>fEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fEnterCoupon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fEnterCoupon.Designer.cs">
+      <DependentUpon>fEnterCoupon.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fLogin.cs">
       <SubType>Form</SubType>
@@ -74,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\fEmployee.resx">
       <DependentUpon>fEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fEnterCoupon.resx">
+      <DependentUpon>fEnterCoupon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -104,13 +116,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\kho.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\StoreProcedure.sql" />
     <Content Include="Database\DB.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -24,7 +24,7 @@ namespace NHOM1_QLKHO.Models
         {
             this.EmployeeCode = Int32.Parse(dataRow["EmployeeCode"].ToString());
             this.DateOfBirth = DateTime.Parse(dataRow["DateOfBirth"].ToString());
-            this.FullName = dataRow["FullName"].ToString();
+            this.FullName = dataRow["EmployeeName"].ToString();
             this.PhoneNumber = dataRow["PhoneNumber"].ToString();
         }
     }
