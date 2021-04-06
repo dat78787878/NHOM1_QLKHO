@@ -43,7 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmployeeCode = new System.Windows.Forms.TextBox();
+            this.lbEmployeeCode = new System.Windows.Forms.TextBox();
             this.dgvEmployee = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.SuspendLayout();
@@ -208,13 +208,13 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Quản Lí Nhân Viên";
             // 
-            // txtEmployeeCode
+            // lbEmployeeCode
             // 
-            this.txtEmployeeCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeCode.Location = new System.Drawing.Point(114, 78);
-            this.txtEmployeeCode.Name = "txtEmployeeCode";
-            this.txtEmployeeCode.Size = new System.Drawing.Size(129, 26);
-            this.txtEmployeeCode.TabIndex = 35;
+            this.lbEmployeeCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmployeeCode.Location = new System.Drawing.Point(114, 78);
+            this.lbEmployeeCode.Name = "lbEmployeeCode";
+            this.lbEmployeeCode.Size = new System.Drawing.Size(129, 26);
+            this.lbEmployeeCode.TabIndex = 35;
             // 
             // dgvEmployee
             // 
@@ -233,7 +233,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(989, 559);
             this.Controls.Add(this.dgvEmployee);
-            this.Controls.Add(this.txtEmployeeCode);
+            this.Controls.Add(this.lbEmployeeCode);
             this.Controls.Add(this.btnResetInput);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSearch);
@@ -274,7 +274,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEmployeeCode;
+        private System.Windows.Forms.TextBox lbEmployeeCode;
         private System.Windows.Forms.DataGridView dgvEmployee;
     }
 }

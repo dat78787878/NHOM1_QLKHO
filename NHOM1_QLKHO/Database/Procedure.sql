@@ -1,4 +1,4 @@
-------------Procedure Employee 
+﻿------------Procedure Employee 
 CREATE PROCEDURE Employee_GetAll
 AS
 BEGIN
@@ -14,10 +14,12 @@ CREATE PROCEDURE Employee_Insert
 AS
 BEGIN
   INSERT INTO Employee
-    (FullName, DateOfBirth, PhoneNumber)
+    (EmployeeName, DateOfBirth, PhoneNumber)
   VALUES(@fullName, @dateOfBirth, @phoneNumber)
 END
 GO
+
+
 
 CREATE PROCEDURE Employee_Delete
   @employeeCode INT
@@ -36,7 +38,11 @@ CREATE PROCEDURE Employee_Update
 AS
 BEGIN
   UPDATE Employee
-  SET FullName  = @fullName,
+  SET EmployeeName  = @fullName,
   DateOfBirth = @dateOfBirth,
   PhoneNumber = @phoneNumber
   WHERE EmployeeCode = @EmployeeCode
+END
+GO
+
+Employee_Insert N'Đỗ Thành Đạt','08/08/2000','01111111'
