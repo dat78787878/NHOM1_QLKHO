@@ -119,6 +119,35 @@ namespace NHOM1_QLKHO.GUI
             }
         }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string EmployeeName = txtEmployeeName.Text;
+            string phoneNumber = txtPhoneNumber.Text;
+            DateTime dateOfBirth = dateTimeDOB.Value;
+            int EmployeeCode = 0;
+            Int32.TryParse(lbEmployeeCode.Text, out EmployeeCode);
+            try
+            {
+                if (EmployeeCode == -1 || EmployeeName == "" || phoneNumber == "")
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                    return;
+                }
+                Employee employee = new Employee();
+                employee.EmployeeName = txtEmployeeName.Text;
+                employee.PhoneNumber = txtPhoneNumber.Text;
+                employee.DateOfBirth = dateTimeDOB.Value;
+                EmployeeDAO.Instance.Update(employee);
+                MessageBox.Show("Sửa thành công");
+                LoadListEmployee();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                LoadListEmployee();
+            }
+        }
+
 
     }
 }
