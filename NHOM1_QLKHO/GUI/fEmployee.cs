@@ -1,4 +1,5 @@
 ﻿using NHOM1_QLKHO.DAO;
+using NHOM1_QLKHO.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,7 +85,39 @@ namespace NHOM1_QLKHO.GUI
         {
             employeeList.DataSource = EmployeeDAO.Instance.GetAll();
         }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            /// check valid 
+            if (!Check())
+            {
+                MessageBox.Show("Dữ liệu Nhập đang lỗi hệ thống báo dưới đây , Vui lòng kiểm tra lại\n" +
+                    "Họ Và Tên(bao gồm các kí tự) :" + CheckFullName(txtEmployeeName.Text)
+                    + "\nSố điện thoại(bao gồm các số) : " + CheckPhoneNumber(txtPhoneNumber.Text.Trim())
+                    + "\nNgày sinh : " + true
+                    );
+            }
+            // Khi dữ liệu hợp lệ 
+            else
+            {
+                // Lấy dữ liệu nhập : khi đã nhập đủ 
+                Employee employee = new Employee();
+                employee.EmployeeName = txtEmployeeName.Text;
+                employee.PhoneNumber = txtPhoneNumber.Text;
+                employee.DateOfBirth = dateTimeDOB.Value;
 
+                if (EmployeeDAO.Instance.Insert(employee))
+                {
+                    MessageBox.Show("Thêm Thành Công " + txtEmployeeName.Text);
+                    txtEmployeeName.Text = "";
+                    txtPhoneNumber.Text = "";
+                    LoadListEmployee();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi Trong quá trình thêm");
+                }
+            }
+        }
 
 
     }
