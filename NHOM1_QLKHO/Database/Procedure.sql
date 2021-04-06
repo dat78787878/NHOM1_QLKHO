@@ -10,7 +10,7 @@ GO
 CREATE PROCEDURE Employee_Insert
   @fullName NVARCHAR(50),
   @dateOfBirth date,
-  @phoneNumber varchar(50)
+  @phoneNumber varchar(10)
 AS
 BEGIN
   INSERT INTO Employee
@@ -31,17 +31,30 @@ END
 GO
 
 CREATE PROCEDURE Employee_Update
-  @EmployeeCode INT,
+  @employeeCode INT,
   @fullName NVARCHAR(50),
   @dateOfBirth date,
-  @phoneNumber varchar(50)
+  @phoneNumber varchar(10)
 AS
 BEGIN
   UPDATE Employee
   SET EmployeeName  = @fullName,
   DateOfBirth = @dateOfBirth,
   PhoneNumber = @phoneNumber
-  WHERE EmployeeCode = @EmployeeCode
+  WHERE EmployeeCode = @employeeCode
+END
+GO
+
+CREATE PROCEDURE Employees_Search
+  @searchValue NVARCHAR(200)
+AS
+BEGIN
+	SELECT *
+  FROM Employee
+  WHERE EmployeeCode LIKE N'%' + @searchValue + '%'
+    OR EmployeeName LIKE N'%' + @searchValue + '%'
+    OR DateOfBirth LIKE N'%' + @searchValue + '%'
+    OR PhoneNumber LIKE N'%' + @searchValue + '%'
 END
 GO
 

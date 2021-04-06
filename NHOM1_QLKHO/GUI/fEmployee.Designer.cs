@@ -58,6 +58,7 @@
             this.btnResetInput.TabIndex = 34;
             this.btnResetInput.Text = "Làm trống";
             this.btnResetInput.UseVisualStyleBackColor = true;
+            this.btnResetInput.Click += new System.EventHandler(this.btnResetInput_Click);
             // 
             // label2
             // 
@@ -80,6 +81,7 @@
             this.btnSearch.TabIndex = 31;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -101,6 +103,7 @@
             this.btnRefresh.TabIndex = 29;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnDelete
             // 
@@ -112,6 +115,7 @@
             this.btnDelete.TabIndex = 28;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -123,6 +127,7 @@
             this.btnEdit.TabIndex = 27;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 

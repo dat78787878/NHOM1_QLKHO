@@ -134,6 +134,7 @@ namespace NHOM1_QLKHO.GUI
                     return;
                 }
                 Employee employee = new Employee();
+                employee.EmployeeCode = EmployeeCode;
                 employee.EmployeeName = txtEmployeeName.Text;
                 employee.PhoneNumber = txtPhoneNumber.Text;
                 employee.DateOfBirth = dateTimeDOB.Value;
@@ -146,6 +147,49 @@ namespace NHOM1_QLKHO.GUI
                 MessageBox.Show("Có lỗi xảy ra" + err.ToString());
                 LoadListEmployee();
             }
+        }
+        private void MakeNull()
+        {
+            lbEmployeeCode.Text = "";
+            txtEmployeeName.Text = "";
+            txtPhoneNumber.Text = "";
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int employeeCode;
+            Int32.TryParse(lbEmployeeCode.Text.Trim(), out employeeCode);
+            try
+            {
+                EmployeeDAO.Instance.Delete(employeeCode);
+                MessageBox.Show("Xóa thành công");
+                LoadListEmployee();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                LoadListEmployee();
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadListEmployee();
+        }
+
+        private void btnResetInput_Click(object sender, EventArgs e)
+        {
+            MakeNull();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string str = txtSearch.Text.Trim();
+            if (str == "")
+            {
+                MessageBox.Show("Chưa nhập thông tin tìm kiếm");
+                return;
+            }
+            employeeList.DataSource = EmployeeDAO.Instance.Search(str);
         }
 
 
