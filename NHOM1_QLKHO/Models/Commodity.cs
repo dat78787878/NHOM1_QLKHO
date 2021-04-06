@@ -9,26 +9,40 @@ namespace NHOM1_QLKHO.Models
 {
     class Commodity
     {
-        public int CommodityCode { get; set; }
-        public string CommodityName { get; set; }
-        public DateTime DateOfManufacture { get; set; }
-        public DateTime ExpiryDate { get; set; }
-        public string ProducerCode { get; set; }
-        public int Amount { get; set; }
+        private int CommodityCode;
+        private string CommodityName;
+        private DateTime DateOfManufacture;
+        private DateTime ExpiryDate;
+        private int ProducerCode;
+        private int Amount;
 
-        public Commodity()
+        public int commodityCode { get=>CommodityCode; set=>CommodityCode=value; }
+        public string commodityName { get=>CommodityName; set=>CommodityName=value; }
+        public DateTime dateOfManufacture { get=>DateOfManufacture; set=>DateOfManufacture=value; }
+        public DateTime expiryDate { get=>ExpiryDate; set=>ExpiryDate=value; }
+        public int producerCode { get=>ProducerCode; set=>ProducerCode=value; }
+        public int amount { get=>Amount; set=>Amount=value; }
+
+        public Commodity(int CommodityCode,string CommodityName,DateTime DateOfManufactory,DateTime ExpiryDate,int ProducerCode , int Amount)
         {
+            this.CommodityCode = CommodityCode;
+            this.CommodityName = CommodityName;
+            this.DateOfManufacture = DateOfManufacture;
+            this.ExpiryDate = ExpiryDate;
+            this.ProducerCode = ProducerCode;
+            this.Amount = Amount;
 
         }
 
-        public Commodity(DataRow dataRow)
+        public Commodity(DataRow Row)
         {
-            this.CommodityCode = Int32.Parse(dataRow["EnterCouponCode"].ToString());
-            this.DateOfManufacture = DateTime.Parse(dataRow["DateOfImport"].ToString());
-            this.ExpiryDate = DateTime.Parse(dataRow["DateOfImport"].ToString());
-            this.CommodityName = dataRow["CommodityCode"].ToString();
-            this.ProducerCode = dataRow["EmployeeCode"].ToString();
-            this.Amount = Int32.Parse(dataRow["NumberOfImport"].ToString());
+            Int32.TryParse(Row["CommodityCode"].ToString(), out this.CommodityCode);
+            
+            this.CommodityName = Row["CommodityName"].ToString();
+            this.DateOfManufacture = (DateTime)Row["DateOfManufacture"];
+            this.ExpiryDate = (DateTime)Row["ExpiryDate"];
+            Int32.TryParse(Row["ProducerCode"].ToString(), out this.ProducerCode);
+            Int32.TryParse(Row["Amount"].ToString(),out this.Amount);
         }
     }
 }

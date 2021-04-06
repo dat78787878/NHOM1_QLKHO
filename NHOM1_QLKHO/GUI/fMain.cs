@@ -23,5 +23,12 @@ namespace NHOM1_QLKHO
             new fEmployee().Show();
             this.Hide();
         }
+
+        private void qUẢNLÝHÀNGTRONGKHOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new fCommodity().Show();
+            this.Hide();
+
+        }
     }
 }

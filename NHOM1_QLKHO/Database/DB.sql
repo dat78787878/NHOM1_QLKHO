@@ -1,4 +1,5 @@
 CREATE DATABASE QLKHO
+use QLKHO
 go
 
 CREATE TABLE QLKHO.dbo.Employee (

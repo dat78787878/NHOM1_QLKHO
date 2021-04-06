@@ -1,78 +1,70 @@
-CREATE DATABASE QLKHO
-go
-
-CREATE TABLE QLKHO.dbo.Employee (
-  EmployeeCode int IDENTITY,
-  EmployeeName nvarchar(50) NULL,
-  DateOfBirth date NULL,
-  PhoneNumber char(10) NULL,
-  CONSTRAINT PK_NhanVien_EmployeeCode PRIMARY KEY CLUSTERED (EmployeeCode)
-)
-ON [PRIMARY]
+use QLKHO
 GO
-
-CREATE TABLE QLKHO.dbo.Producer (
-  ProducerCode int IDENTITY,
-  ProducerName nvarchar(50) NULL,
-  Address nvarchar(50) NULL,
-  PhoneNumber char(10) NULL,
-  CONSTRAINT PK_NhaSanXuat_ProducerCode PRIMARY KEY CLUSTERED (ProducerCode)
-)
-ON [PRIMARY]
-GO
-
-CREATE TABLE QLKHO.dbo.EnterCoupon (
-  EnterCouponCode int IDENTITY,
-  CommodityCode int NULL,
-  EmployeeCode int NULL,
-  DateOfImport date NULL,
-  NumberOfImport int NULL,
-  CONSTRAINT PK_PhieuNhap_EnterCouponCode PRIMARY KEY CLUSTERED (EnterCouponCode)
-)
-ON [PRIMARY]
-GO
-
-CREATE TABLE QLKHO.dbo.Commodity (
-  CommodityCode int IDENTITY,
-  CommodityName nvarchar(50) NULL,
-  DateOfManufacture date NULL,
-  ExpiryDate date NULL,
-  ProducerCode int NULL,
-  Amount int NULL,
-  CONSTRAINT PK_HangHoa_CommodityCode PRIMARY KEY CLUSTERED (CommodityCode)
-)
-ON [PRIMARY]
-GO
-
-CREATE TABLE QLKHO.dbo.Bill (
-  BillCode int IDENTITY,
-  CommodityCode int NULL,
-  EmployeeCode int NULL,
-  DateOfExport date NULL,
-  NumberOfExport int NULL,
-  CONSTRAINT PK_PhieuXuat_BillCode PRIMARY KEY CLUSTERED (BillCode)
-)
-ON [PRIMARY]
-GO
-
-ALTER TABLE QLKHO.dbo.EnterCoupon
-  ADD CONSTRAINT FK_EnterCoupon_Commodity FOREIGN KEY (CommodityCode) REFERENCES dbo.Commodity (CommodityCode)
-GO
-
-ALTER TABLE QLKHO.dbo.EnterCoupon
-  ADD CONSTRAINT FK_EnterCoupon_Employee FOREIGN KEY (EmployeeCode) REFERENCES dbo.Employee (EmployeeCode)
+-----------------------hàng hóa------------------------
+CREATE PROCEDURE SP_HangHoa_GetAll
+AS
+BEGIN
+  SELECT *
+  FROM Commodity
+END
 GO
 
 
-
-ALTER TABLE QLKHO.dbo.Bill
-  ADD CONSTRAINT FK_Bill_Commodity FOREIGN KEY (CommodityCode) REFERENCES dbo.Commodity (CommodityCode)
+CREATE PROCEDURE SP_HangHoa_Insert
+  @CommodityName NVARCHAR(50),
+  @DateOfManufacture DATE,
+  @ExpiryDate DATE,
+  @ProducerCode int
+  
+AS
+BEGIN
+  INSERT INTO Commodity(CommodityName,DateOfManufacture,ExpiryDate,ProducerCode)
+  VALUES(@CommodityName,@DateOfManufacture,@ExpiryDate,@ProducerCode)
+END
 GO
 
-ALTER TABLE QLKHO.dbo.Bill
-  ADD CONSTRAINT FK_Bill_Employee FOREIGN KEY (EmployeeCode) REFERENCES dbo.Employee (EmployeeCode)
+CREATE PROCEDURE SP_HangHoa_Delete
+  @CommodityCode int
+AS
+BEGIN
+  
+  DELETE Commodity
+  WHERE CommodityCode = @CommodityCode
+END
 GO
 
-ALTER TABLE QLKHO.dbo.Commodity
-  ADD CONSTRAINT FK_Commodity_Producer FOREIGN KEY (ProducerCode) REFERENCES dbo.Producer (ProducerCode)
+CREATE PROCEDURE SP_HangHoa_Update
+  @CommodityCode int,
+  @CommodityName NVARCHAR(50),
+  @DateOfManufacture DATE,
+  @ExpiryDate DATE,
+  @ProducerCode int
+  
+AS
+BEGIN
+  UPDATE Commodity
+  SET 
+      CommodityName=@CommodityName,
+	  DateOfManufacture=@DateOfManufacture,
+	  ExpiryDate=@ExpiryDate,
+	  ProducerCode=@ProducerCode
+	
+  
+  WHERE CommodityCode = @CommodityCode
+END
+GO
+
+
+CREATE PROCEDURE SP_HangHoa_Search
+  @searchValue NVARCHAR(50)
+AS
+BEGIN
+  SELECT *
+  FROM Commodity
+  WHERE CommodityCode LIKE N'%' + @searchValue + '%'
+    OR CommodityName LIKE N'%' + @searchValue + '%'
+    OR DateOfManufacture LIKE N'%' + @searchValue + '%'
+    OR ExpiryDate LIKE N'%' + @searchValue + '%'
+    OR ProducerCode LIKE N'%' + @searchValue + '%'
+END   
 GO
