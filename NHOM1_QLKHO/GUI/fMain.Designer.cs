@@ -1,6 +1,6 @@
 ﻿namespace NHOM1_QLKHO
 {
-    partial class Form1
+    partial class fMain
     {
         /// <summary>
         /// Required designer variable.
@@ -31,11 +31,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qUẢNLÝPHIẾUXUẤTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hƯỚNGDẪNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đĂNGXUẤTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
@@ -61,12 +61,20 @@
             this.quanToolStripMenuItem.Name = "quanToolStripMenuItem";
             this.quanToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
             this.quanToolStripMenuItem.Text = "QUẢN LÝ PHIẾU NHẬP";
+            this.quanToolStripMenuItem.Click += new System.EventHandler(this.quanToolStripMenuItem_Click);
             // 
             // qUẢNLÝPHIẾUXUẤTToolStripMenuItem
             // 
             this.qUẢNLÝPHIẾUXUẤTToolStripMenuItem.Name = "qUẢNLÝPHIẾUXUẤTToolStripMenuItem";
             this.qUẢNLÝPHIẾUXUẤTToolStripMenuItem.Size = new System.Drawing.Size(136, 20);
             this.qUẢNLÝPHIẾUXUẤTToolStripMenuItem.Text = "QUẢN LÝ PHIẾU XUẤT";
+            // 
+            // qUẢNLÝNHÂNVIÊNToolStripMenuItem
+            // 
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Name = "qUẢNLÝNHÂNVIÊNToolStripMenuItem";
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Text = "QUẢN LÝ NHÂN VIÊN";
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Click += new System.EventHandler(this.qUẢNLÝNHÂNVIÊNToolStripMenuItem_Click);
             // 
             // qUẢNLÝHÀNGTRONGKHOToolStripMenuItem
             // 
@@ -96,14 +104,7 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ KHO HÀNG HÓA";
             // 
-            // qUẢNLÝNHÂNVIÊNToolStripMenuItem
-            // 
-            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Name = "qUẢNLÝNHÂNVIÊNToolStripMenuItem";
-            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
-            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Text = "QUẢN LÝ NHÂN VIÊN";
-            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Click += new System.EventHandler(this.qUẢNLÝNHÂNVIÊNToolStripMenuItem_Click);
-            // 
-            // Form1
+            // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -113,7 +114,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "fMain";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

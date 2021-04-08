@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using NHOM1_QLKHO.GUI;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -192,6 +193,9 @@ namespace NHOM1_QLKHO.GUI
             employeeList.DataSource = EmployeeDAO.Instance.Search(str);
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

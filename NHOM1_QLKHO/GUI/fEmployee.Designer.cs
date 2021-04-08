@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbEmployeeCode = new System.Windows.Forms.TextBox();
             this.dgvEmployee = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -233,11 +234,22 @@
             this.dgvEmployee.Size = new System.Drawing.Size(806, 270);
             this.dgvEmployee.TabIndex = 36;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(2, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "Trở về";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // fEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(989, 559);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvEmployee);
             this.Controls.Add(this.lbEmployeeCode);
             this.Controls.Add(this.btnResetInput);
@@ -282,5 +294,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox lbEmployeeCode;
         private System.Windows.Forms.DataGridView dgvEmployee;
+        private System.Windows.Forms.Button button1;
     }
 }

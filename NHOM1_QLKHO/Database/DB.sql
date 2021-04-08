@@ -1,5 +1,5 @@
 CREATE DATABASE QLKHO
-
+go
 
 CREATE TABLE QLKHO.dbo.Employee (
   EmployeeCode int IDENTITY,
@@ -72,16 +72,6 @@ GO
 ALTER TABLE QLKHO.dbo.Bill
   ADD CONSTRAINT FK_Bill_Employee FOREIGN KEY (EmployeeCode) REFERENCES dbo.Employee (EmployeeCode)
 GO
-
-ALTER TABLE QLKHO.dbo.Bill
-  ADD CONSTRAINT FK_Bill_Commodity FOREIGN KEY (CommodityCode) REFERENCES dbo.Commodity (CommodityCode)
-GO
-
-ALTER TABLE QLKHO.dbo.Bill
-  ADD CONSTRAINT FK_Bill_Employee FOREIGN KEY (EmployeeCode) REFERENCES dbo.Employee (EmployeeCode)
-GO
-
-
 
 ALTER TABLE QLKHO.dbo.Commodity
   ADD CONSTRAINT FK_Commodity_Producer FOREIGN KEY (ProducerCode) REFERENCES dbo.Producer (ProducerCode)

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace NHOM1_QLKHO
 {
-    public partial class Form1 : Form
+    public partial class fMain : Form
     {
-        public Form1()
+        public fMain()
         {
             InitializeComponent();
         }
@@ -22,6 +22,11 @@ namespace NHOM1_QLKHO
         {
             new fEmployee().Show();
             this.Hide();
+        }
+
+        private void quanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

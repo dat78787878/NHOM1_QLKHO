@@ -17,7 +17,7 @@ namespace NHOM1_QLKHO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fEmployee());
+            Application.Run(new fEnterCoupon());
         }
     }
 }
