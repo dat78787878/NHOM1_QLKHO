@@ -31,5 +31,11 @@ namespace NHOM1_QLKHO
             frm.ShowDialog();
             this.Show();
         }
+        private void qUẢNLÝHÀNGTRONGKHOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new fCommodity().Show();
+            this.Hide();
+
+        }
     }
 }

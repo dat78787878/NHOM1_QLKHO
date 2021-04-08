@@ -84,11 +84,19 @@
             this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Text = "QUẢN LÝ NHÂN VIÊN";
             this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Click += new System.EventHandler(this.qUẢNLÝNHÂNVIÊNToolStripMenuItem_Click);
             // 
+            // qUẢNLÝNHÂNVIÊNToolStripMenuItem
+            // 
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Name = "qUẢNLÝNHÂNVIÊNToolStripMenuItem";
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Text = "QUẢN LÝ NHÂN VIÊN";
+            this.qUẢNLÝNHÂNVIÊNToolStripMenuItem.Click += new System.EventHandler(this.qUẢNLÝNHÂNVIÊNToolStripMenuItem_Click);
+            // 
             // qUẢNLÝHÀNGTRONGKHOToolStripMenuItem
             // 
             this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem.Name = "qUẢNLÝHÀNGTRONGKHOToolStripMenuItem";
             this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem.Size = new System.Drawing.Size(185, 20);
             this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem.Text = "THỐNG KÊ HÀNG TRONG KHO";
+            this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem.Click += new System.EventHandler(this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem_Click);
             // 
             // hƯỚNGDẪNToolStripMenuItem
             // 

@@ -24,9 +24,9 @@ namespace NHOM1_QLKHO.Models
         public Commodity(DataRow dataRow)
         {
             this.CommodityCode = Int32.Parse(dataRow["CommodityCode"].ToString());
-            this.CommodityName = dataRow["CommodityName"].ToString();
             this.DateOfManufacture = DateTime.Parse(dataRow["DateOfManufacture"].ToString());
             this.ExpiryDate = DateTime.Parse(dataRow["ExpiryDate"].ToString());
+            this.CommodityName = dataRow["CommodityName"].ToString();
             this.ProducerCode = dataRow["ProducerCode"].ToString();
             this.Amount = Int32.Parse(dataRow["Amount"].ToString());
         }
