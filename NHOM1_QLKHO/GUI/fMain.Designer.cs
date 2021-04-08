@@ -35,9 +35,9 @@
             this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hƯỚNGDẪNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đĂNGXUẤTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
-            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,13 @@
             this.đĂNGXUẤTToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.đĂNGXUẤTToolStripMenuItem.Text = "ĐĂNG XUẤT";
             // 
+            // tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem
+            // 
+            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem.Name = "tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem";
+            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem.Size = new System.Drawing.Size(168, 20);
+            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem.Text = "THỐNG KÊ HÀNG TỒN KHO";
+            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem.Click += new System.EventHandler(this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -105,12 +112,6 @@
             this.label1.Size = new System.Drawing.Size(251, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ KHO HÀNG HÓA";
-            // 
-            // tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem
-            // 
-            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem.Name = "tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem";
-            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem.Size = new System.Drawing.Size(168, 20);
-            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem.Text = "THỐNG KÊ HÀNG TỒN KHO";
             // 
             // Form1
             // 

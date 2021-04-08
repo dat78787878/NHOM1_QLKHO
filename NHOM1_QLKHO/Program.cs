@@ -17,8 +17,7 @@ namespace NHOM1_QLKHO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            Application.Run(new fCommodityStatistics());
+            Application.Run(new Form1());
         }
     }
 }
