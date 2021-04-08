@@ -35,6 +35,7 @@
             this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hƯỚNGDẪNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đĂNGXUẤTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
             this.menuStrip1.SuspendLayout();
@@ -49,10 +50,11 @@
             this.qUẢNLÝNHÂNVIÊNToolStripMenuItem,
             this.qUẢNLÝHÀNGTRONGKHOToolStripMenuItem,
             this.hƯỚNGDẪNToolStripMenuItem,
-            this.đĂNGXUẤTToolStripMenuItem});
+            this.đĂNGXUẤTToolStripMenuItem,
+            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(899, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(959, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -110,6 +112,13 @@
             this.đĂNGXUẤTToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.đĂNGXUẤTToolStripMenuItem.Text = "ĐĂNG XUẤT";
             // 
+            // tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem
+            // 
+            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem.Name = "tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem";
+            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem.Size = new System.Drawing.Size(168, 20);
+            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem.Text = "THỐNG KÊ HÀNG TỒN KHO";
+            this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem.Click += new System.EventHandler(this.tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -127,7 +136,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NHOM1_QLKHO.Properties.Resources.kho;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(899, 466);
+            this.ClientSize = new System.Drawing.Size(959, 466);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -152,6 +161,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem qUẢNLÝNHÂNVIÊNToolStripMenuItem;
         private System.Diagnostics.PerformanceCounter performanceCounter1;
+        private System.Windows.Forms.ToolStripMenuItem tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem;
     }
 }
 

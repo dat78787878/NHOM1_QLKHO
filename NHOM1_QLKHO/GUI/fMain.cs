@@ -37,5 +37,11 @@ namespace NHOM1_QLKHO
             this.Hide();
 
         }
+
+        private void tHỐNGKÊHÀNGTỒNKHOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           new fCommodityStatistics().Show();
+            this.Hide();
+        }
     }
 }

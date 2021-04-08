@@ -65,6 +65,12 @@
     </Compile>
     <Compile Include="GUI\fBill.Designer.cs">
       <DependentUpon>fBill.cs</DependentUpon>
+     </Compile>
+    <Compile Include="GUI\fCommodityStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fCommodityStatistics.Designer.cs">
+      <DependentUpon>fCommodityStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fEmployee.cs">
       <SubType>Form</SubType>
@@ -105,6 +111,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\fBill.resx">
       <DependentUpon>fBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fCommodityStatistics.resx">
+      <DependentUpon>fCommodityStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fEmployee.resx">
       <DependentUpon>fEmployee.cs</DependentUpon>
