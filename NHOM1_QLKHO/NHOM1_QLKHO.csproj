@@ -58,7 +58,14 @@
     <Compile Include="DAO\CommodityDAO.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DAO\EnterCouponDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DatAccessLayer\DataProvider.cs" />
+    <Compile Include="GUI\fBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fBill.Designer.cs">
+      <DependentUpon>fBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +97,9 @@
     <Compile Include="Models\Producer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\fBill.resx">
+      <DependentUpon>fBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fEmployee.resx">
       <DependentUpon>fEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +142,7 @@
   <ItemGroup>
     <Content Include="Database\StoreProcedure.sql" />
     <Content Include="Database\DB.sql" />
+    <Content Include="Database\StoreProcedure.sql" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup Condition="$(VisualStudioVersion) == '16.0'">

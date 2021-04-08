@@ -24,9 +24,12 @@ namespace NHOM1_QLKHO
             this.Hide();
         }
 
-        private void quanToolStripMenuItem_Click(object sender, EventArgs e)
+        private void qUẢNLÝPHIẾUXUẤTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fBill frm = new fBill();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }
