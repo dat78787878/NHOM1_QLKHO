@@ -15,6 +15,11 @@ namespace NHOM1_QLKHO.DAO
     class CommodityDAO { 
 
         private static CommodityDAO instance;
+        internal static CommodityDAO Instance
+        {
+            get { if (instance == null) instance = new CommodityDAO(); return instance; }
+            private set { instance = value; }
+        }
         public List<Commodity> GetAll()
         {
                 List<Commodity> list = new List<Commodity>();

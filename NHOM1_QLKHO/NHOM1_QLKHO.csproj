@@ -65,7 +65,7 @@
     </Compile>
     <Compile Include="GUI\fBill.Designer.cs">
       <DependentUpon>fBill.cs</DependentUpon>
-     </Compile>
+    </Compile>
     <Compile Include="GUI\fCommodityStatistics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +102,12 @@
     <Compile Include="GUI\fCommodity.Designer.cs">
       <DependentUpon>fCommodity.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fTutorial.Designer.cs">
+      <DependentUpon>fTutorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\Commodity.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fCommodity.resx">
       <DependentUpon>fCommodity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fTutorial.resx">
+      <DependentUpon>fTutorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -161,6 +170,13 @@
     <Content Include="Database\StoreProcedure.sql" />
     <Content Include="Database\DB.sql" />
     <Content Include="Database\StoreProcedure.sql" />
+    <None Include="Images\UI_Main.jpg" />
+    <None Include="Images\UI_Login.jpg" />
+    <None Include="Images\UI_EnterCoupon.jpg" />
+    <None Include="Images\UI_Employee.jpg" />
+    <None Include="Images\UI_CommodityStatistic.jpg" />
+    <None Include="Images\UI_Commodity.jpg" />
+    <None Include="Images\UI_Bill.jpg" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup Condition="$(VisualStudioVersion) == '16.0'">
