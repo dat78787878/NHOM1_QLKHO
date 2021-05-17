@@ -157,5 +157,12 @@ namespace NHOM1_QLKHO.GUI
             }
             CommodityList.DataSource = CommodityDAO.Instance.Search(str);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fMain fMain = new fMain();
+            fMain.Show();
+            this.Hide();
+        }
     }
 }

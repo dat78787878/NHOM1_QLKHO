@@ -424,3 +424,15 @@ end
 
 ----------------. /Văn ---------------
 
+
+create Proc SP_DangNHap
+@UserName varchar(50),
+@Pass varchar(50)
+as
+begin
+	IF EXISTS (SELECT * FROM Accout  WHERE UserName =  @UserName and Pass = @Pass)
+		SELECT 1;
+	  ELSE
+		SELECT 0;
+end
+

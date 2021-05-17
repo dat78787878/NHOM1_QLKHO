@@ -43,5 +43,25 @@ namespace NHOM1_QLKHO
            new fCommodityStatistics().Show();
             this.Hide();
         }
+
+        private void hƯỚNGDẪNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new fTutorial().Show();
+            this.Hide();
+        }
+
+        private void đĂNGXUẤTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fLogin fLogin = new fLogin();
+            fLogin.Show();
+
+            this.Hide();
+        }
+
+        private void quanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new fEnterCoupon().Show();
+            this.Hide();
+        }
     }
 }

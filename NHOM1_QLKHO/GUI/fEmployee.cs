@@ -195,7 +195,9 @@ namespace NHOM1_QLKHO.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            fMain fMain = new fMain();
+            fMain.Show();
+            this.Hide(); this.Hide();
         }
     }
 }

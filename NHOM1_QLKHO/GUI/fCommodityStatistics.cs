@@ -34,5 +34,12 @@ namespace NHOM1_QLKHO.GUI
             string commodityname = txtCommodityName.Text;
             dtgvCommodity.DataSource = CommodityDAO.Instance.GetCommodityListByName(commodityname);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fMain fMain = new fMain();
+            fMain.Show();
+            this.Hide();
+        }
     }
 }

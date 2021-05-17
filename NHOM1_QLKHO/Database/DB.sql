@@ -56,6 +56,13 @@ CREATE TABLE QLKHO.dbo.Bill (
 ON [PRIMARY]
 GO
 
+CREATE TABLE QLKHO.dbo.Accout (
+	UserName varchar(20),
+	Pass varchar(20),
+)
+ON [PRIMARY]
+GO
+
 ALTER TABLE QLKHO.dbo.EnterCoupon
   ADD CONSTRAINT FK_EnterCoupon_Commodity FOREIGN KEY (CommodityCode) REFERENCES dbo.Commodity (CommodityCode)
 GO

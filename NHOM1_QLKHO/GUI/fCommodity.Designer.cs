@@ -46,13 +46,15 @@
             this.dtpHSD = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.txtProducerCode = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommodity)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCommodity
             // 
             this.dgvCommodity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCommodity.Location = new System.Drawing.Point(2, 201);
+            this.dgvCommodity.Location = new System.Drawing.Point(105, 277);
             this.dgvCommodity.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCommodity.Name = "dgvCommodity";
             this.dgvCommodity.RowHeadersWidth = 51;
@@ -63,7 +65,7 @@
             // txtCommodityCode
             // 
             this.txtCommodityCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCommodityCode.Location = new System.Drawing.Point(143, 21);
+            this.txtCommodityCode.Location = new System.Drawing.Point(246, 97);
             this.txtCommodityCode.Name = "txtCommodityCode";
             this.txtCommodityCode.Size = new System.Drawing.Size(129, 26);
             this.txtCommodityCode.TabIndex = 49;
@@ -71,7 +73,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(678, 159);
+            this.btnSearch.Location = new System.Drawing.Point(781, 235);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(64, 30);
@@ -83,7 +85,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(541, 158);
+            this.txtTimKiem.Location = new System.Drawing.Point(644, 234);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
@@ -93,7 +95,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(678, 103);
+            this.btnRefresh.Location = new System.Drawing.Point(781, 179);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(64, 29);
@@ -105,7 +107,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(665, 16);
+            this.btnDelete.Location = new System.Drawing.Point(768, 92);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(64, 31);
@@ -117,7 +119,7 @@
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(584, 103);
+            this.btnEdit.Location = new System.Drawing.Point(687, 179);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(56, 31);
@@ -129,7 +131,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(584, 16);
+            this.btnAdd.Location = new System.Drawing.Point(687, 92);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(56, 32);
@@ -141,7 +143,7 @@
             // txtCommodityName
             // 
             this.txtCommodityName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCommodityName.Location = new System.Drawing.Point(143, 72);
+            this.txtCommodityName.Location = new System.Drawing.Point(246, 148);
             this.txtCommodityName.Margin = new System.Windows.Forms.Padding(2);
             this.txtCommodityName.Multiline = true;
             this.txtCommodityName.Name = "txtCommodityName";
@@ -152,7 +154,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 75);
+            this.label5.Location = new System.Drawing.Point(119, 151);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 19);
@@ -163,7 +165,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 25);
+            this.label4.Location = new System.Drawing.Point(119, 101);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 19);
@@ -185,7 +187,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 124);
+            this.label2.Location = new System.Drawing.Point(119, 200);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 19);
@@ -194,7 +196,7 @@
             // 
             // dtpNSX
             // 
-            this.dtpNSX.Location = new System.Drawing.Point(143, 124);
+            this.dtpNSX.Location = new System.Drawing.Point(246, 200);
             this.dtpNSX.Name = "dtpNSX";
             this.dtpNSX.Size = new System.Drawing.Size(129, 20);
             this.dtpNSX.TabIndex = 52;
@@ -203,7 +205,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 170);
+            this.label3.Location = new System.Drawing.Point(121, 246);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 19);
@@ -212,7 +214,7 @@
             // 
             // dtpHSD
             // 
-            this.dtpHSD.Location = new System.Drawing.Point(143, 168);
+            this.dtpHSD.Location = new System.Drawing.Point(246, 244);
             this.dtpHSD.Name = "dtpHSD";
             this.dtpHSD.Size = new System.Drawing.Size(129, 20);
             this.dtpHSD.TabIndex = 54;
@@ -221,7 +223,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(306, 29);
+            this.label6.Location = new System.Drawing.Point(409, 105);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 19);
@@ -231,16 +233,40 @@
             // txtProducerCode
             // 
             this.txtProducerCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducerCode.Location = new System.Drawing.Point(394, 22);
+            this.txtProducerCode.Location = new System.Drawing.Point(497, 98);
             this.txtProducerCode.Name = "txtProducerCode";
             this.txtProducerCode.Size = new System.Drawing.Size(129, 26);
             this.txtProducerCode.TabIndex = 59;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(-2, -1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 60;
+            this.button1.Text = "Trở về";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label7.Location = new System.Drawing.Point(388, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(193, 26);
+            this.label7.TabIndex = 61;
+            this.label7.Text = "Quản lý hàng hóa";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // fCommodity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 450);
+            this.ClientSize = new System.Drawing.Size(954, 563);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtProducerCode);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtpHSD);
@@ -287,5 +313,7 @@
         private System.Windows.Forms.DateTimePicker dtpHSD;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtProducerCode;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label7;
     }
 }
