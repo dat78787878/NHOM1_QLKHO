@@ -54,7 +54,6 @@ namespace NHOM1_QLKHO
         {
             fLogin fLogin = new fLogin();
             fLogin.Show();
-
             this.Hide();
         }
 

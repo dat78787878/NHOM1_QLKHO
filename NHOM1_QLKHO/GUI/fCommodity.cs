@@ -66,14 +66,14 @@ namespace NHOM1_QLKHO.GUI
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string CommodityName = txtCommodityName.Text.Trim();
-           
             DateTime DateOfManufacture;
             DateTime.TryParse(dtpNSX.Text, out DateOfManufacture);
             DateTime ExpiryDate;
             DateTime.TryParse(dtpHSD.Text, out ExpiryDate);
             int ProducerCode=-1;
             Int32.TryParse(txtProducerCode.Text, out ProducerCode);
-        
+           
+
 
 
             try

@@ -171,6 +171,8 @@
     <Content Include="Database\StoreProcedure.sql" />
     <Content Include="Database\DB.sql" />
     <Content Include="Database\StoreProcedure.sql" />
+    <None Include="Resources\mau-background-don-gian-02-1024x768.jpg" />
+    <None Include="Resources\LoginBackground.jpg" />
     <None Include="Images\UI_Main.jpg" />
     <None Include="Images\UI_Login.jpg" />
     <None Include="Images\UI_EnterCoupon.jpg" />

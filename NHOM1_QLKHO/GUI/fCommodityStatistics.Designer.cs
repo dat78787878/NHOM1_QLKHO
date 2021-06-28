@@ -46,10 +46,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(222, 32);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(389, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(334, 33);
+            this.label1.Size = new System.Drawing.Size(340, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thống Kê Hàng Tồn Kho";
             // 
@@ -63,21 +65,26 @@
             this.ExpiryDate,
             this.ProducerCode,
             this.Amount});
-            this.dtgvCommodity.Location = new System.Drawing.Point(23, 163);
+            this.dtgvCommodity.Location = new System.Drawing.Point(44, 206);
+            this.dtgvCommodity.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvCommodity.Name = "dtgvCommodity";
-            this.dtgvCommodity.Size = new System.Drawing.Size(764, 315);
+            this.dtgvCommodity.RowHeadersWidth = 51;
+            this.dtgvCommodity.Size = new System.Drawing.Size(1139, 388);
             this.dtgvCommodity.TabIndex = 1;
             // 
             // CommodityCode
             // 
             this.CommodityCode.DataPropertyName = "CommodityCode";
             this.CommodityCode.HeaderText = "Mã Hàng Hóa";
+            this.CommodityCode.MinimumWidth = 6;
             this.CommodityCode.Name = "CommodityCode";
+            this.CommodityCode.Width = 125;
             // 
             // CommodityName
             // 
             this.CommodityName.DataPropertyName = "CommodityName";
             this.CommodityName.HeaderText = "Tên Hàng Hóa";
+            this.CommodityName.MinimumWidth = 6;
             this.CommodityName.Name = "CommodityName";
             this.CommodityName.Width = 180;
             // 
@@ -85,6 +92,7 @@
             // 
             this.DateOfManufacture.DataPropertyName = "DateOfManufacture";
             this.DateOfManufacture.HeaderText = "Ngày Sản Xuất";
+            this.DateOfManufacture.MinimumWidth = 6;
             this.DateOfManufacture.Name = "DateOfManufacture";
             this.DateOfManufacture.Width = 120;
             // 
@@ -92,6 +100,7 @@
             // 
             this.ExpiryDate.DataPropertyName = "ExpiryDate";
             this.ExpiryDate.HeaderText = "Hạn Sử Dụng";
+            this.ExpiryDate.MinimumWidth = 6;
             this.ExpiryDate.Name = "ExpiryDate";
             this.ExpiryDate.Width = 120;
             // 
@@ -99,26 +108,32 @@
             // 
             this.ProducerCode.DataPropertyName = "ProducerCode";
             this.ProducerCode.HeaderText = "Mã NSX";
+            this.ProducerCode.MinimumWidth = 6;
             this.ProducerCode.Name = "ProducerCode";
+            this.ProducerCode.Width = 125;
             // 
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
             this.Amount.HeaderText = "Số Lượng";
+            this.Amount.MinimumWidth = 6;
             this.Amount.Name = "Amount";
+            this.Amount.Width = 125;
             // 
             // txtCommodityName
             // 
-            this.txtCommodityName.Location = new System.Drawing.Point(533, 118);
+            this.txtCommodityName.Location = new System.Drawing.Point(850, 148);
+            this.txtCommodityName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCommodityName.Name = "txtCommodityName";
-            this.txtCommodityName.Size = new System.Drawing.Size(160, 20);
+            this.txtCommodityName.Size = new System.Drawing.Size(212, 22);
             this.txtCommodityName.TabIndex = 2;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(712, 116);
+            this.btnSearch.Location = new System.Drawing.Point(1083, 145);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(100, 28);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Tìm Kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -126,19 +141,21 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(56, 115);
+            this.btnRefresh.Location = new System.Drawing.Point(155, 145);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(100, 28);
             this.btnRefresh.TabIndex = 4;
-            this.btnRefresh.Text = "Xem";
+            this.btnRefresh.Text = "Refesh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(0, -2);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 61;
             this.button1.Text = "Trở về";
             this.button1.UseVisualStyleBackColor = true;
@@ -146,15 +163,18 @@
             // 
             // fCommodityStatistics
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 502);
+            this.BackgroundImage = global::NHOM1_QLKHO.Properties.Resources.mau_background_don_gian_02_1024x768;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1221, 618);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtCommodityName);
             this.Controls.Add(this.dtgvCommodity);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fCommodityStatistics";
             this.Text = "fCommodityStatistics";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCommodity)).EndInit();

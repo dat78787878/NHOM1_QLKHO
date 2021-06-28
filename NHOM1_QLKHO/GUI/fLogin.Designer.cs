@@ -39,10 +39,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(305, 72);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(407, 89);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 22);
+            this.label1.Size = new System.Drawing.Size(239, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý kho hàng";
             // 
@@ -50,9 +52,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(180, 145);
+            this.label2.Location = new System.Drawing.Point(240, 178);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 19);
+            this.label2.Size = new System.Drawing.Size(94, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tài khoản";
             // 
@@ -60,32 +63,36 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(183, 185);
+            this.label3.Location = new System.Drawing.Point(244, 228);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 19);
+            this.label3.Size = new System.Drawing.Size(91, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu";
             // 
             // txttk
             // 
-            this.txttk.Location = new System.Drawing.Point(309, 145);
+            this.txttk.Location = new System.Drawing.Point(412, 178);
+            this.txttk.Margin = new System.Windows.Forms.Padding(4);
             this.txttk.Name = "txttk";
-            this.txttk.Size = new System.Drawing.Size(140, 20);
+            this.txttk.Size = new System.Drawing.Size(185, 22);
             this.txttk.TabIndex = 3;
             // 
             // txtmk
             // 
-            this.txtmk.Location = new System.Drawing.Point(309, 185);
+            this.txtmk.Location = new System.Drawing.Point(412, 228);
+            this.txtmk.Margin = new System.Windows.Forms.Padding(4);
             this.txtmk.Name = "txtmk";
             this.txtmk.PasswordChar = '*';
-            this.txtmk.Size = new System.Drawing.Size(140, 20);
+            this.txtmk.Size = new System.Drawing.Size(185, 22);
             this.txtmk.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(412, 233);
+            this.button1.Location = new System.Drawing.Point(549, 287);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 5;
             this.button1.Text = "Đăng nhập";
             this.button1.UseVisualStyleBackColor = true;
@@ -93,15 +100,18 @@
             // 
             // fLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::NHOM1_QLKHO.Properties.Resources.mau_background_don_gian_02_1024x768;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtmk);
             this.Controls.Add(this.txttk);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fLogin";
             this.Text = "fLogin";
             this.ResumeLayout(false);

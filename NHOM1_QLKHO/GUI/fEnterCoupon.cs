@@ -155,5 +155,12 @@ namespace NHOM1_QLKHO.GUI
             string search = txtTimKiem.Text.Trim();
             enterCouponList.DataSource = EnterCouponDAO.Instance.Search(search);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fMain fMain = new fMain();
+            fMain.Show();
+            this.Hide();
+        }
     }
 }

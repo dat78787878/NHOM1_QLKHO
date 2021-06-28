@@ -13,7 +13,7 @@ namespace NHOM1_QLKHO.Models
         public string CommodityName { get; set; }
         public DateTime DateOfManufacture { get; set; }
         public DateTime ExpiryDate { get; set; }
-        public string ProducerCode { get; set; }
+        public int ProducerCode { get; set; }
         public int Amount { get; set; }
 
         public Commodity()
@@ -27,7 +27,7 @@ namespace NHOM1_QLKHO.Models
             this.DateOfManufacture = DateTime.Parse(dataRow["DateOfManufacture"].ToString());
             this.ExpiryDate = DateTime.Parse(dataRow["ExpiryDate"].ToString());
             this.CommodityName = dataRow["CommodityName"].ToString();
-            this.ProducerCode = dataRow["ProducerCode"].ToString();
+            this.ProducerCode = Int32.Parse(dataRow["ProducerCode"].ToString());
             this.Amount = Int32.Parse(dataRow["Amount"].ToString());
         }
     }

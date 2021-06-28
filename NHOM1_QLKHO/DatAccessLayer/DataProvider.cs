@@ -12,7 +12,8 @@ namespace NHOM1_QLKHO.DatAccessLayer
     {
         private static DataProvider instance; // Ctrl + R + E
 
-        private string connectionSTR = "Data Source= DESKTOP-6E6UK3P;Initial Catalog=QLKHO;Integrated Security=True";
+        private string connectionSTR = "Data Source= DESKTOP-21SDHPC\\SQLEXPRESS;Initial Catalog=QLKHO;Integrated Security=True";
+       
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }

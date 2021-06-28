@@ -27,8 +27,21 @@ CREATE PROCEDURE EnterCoupon_Delete
   @EnterCouponCode INT
 AS
 BEGIN
+
+	declare @Sl int;
+	set @Sl=(select EnterCoupon.NumberOfImport from EnterCoupon where EnterCouponCode = @EnterCouponCode )
+
+	declare @CommodityCode int;
+	set @CommodityCode=(select EnterCoupon.CommodityCode from EnterCoupon where EnterCouponCode = @EnterCouponCode )
+
+	Update Commodity
+	set Amount = Amount - @Sl
+	where CommodityCode = @CommodityCode
+
   DELETE EnterCoupon
   WHERE EnterCouponCode = @EnterCouponCode
+
+	
 END
 GO
 
@@ -42,6 +55,10 @@ BEGIN
   INSERT INTO EnterCoupon
     (CommodityCode, EmployeeCode, DateOfImport, NumberOfImport)
   VALUES(@CommodityCode, @EmployeeCode, @DateOfImport, @NumberOfImport)
+	
+	Update Commodity
+	set Amount = Amount + @NumberOfImport
+	where CommodityCode = @CommodityCode
 END
 GO
 
@@ -53,12 +70,27 @@ CREATE PROCEDURE EnterCoupon_Update
   @NumberOfImport INT
 AS
 BEGIN
+	declare @Sl int; 
+	set @Sl=(select EnterCoupon.NumberOfImport from EnterCoupon where EnterCouponCode = @EnterCouponCode )
+
+	declare @CommodityCode1 int;
+	set @CommodityCode1=(select EnterCoupon.CommodityCode from EnterCoupon where EnterCouponCode = @EnterCouponCode )
+
+	Update Commodity
+	set Amount = Amount - @Sl
+	where CommodityCode = @CommodityCode1
+
+	Update Commodity
+	set Amount = Amount + @NumberOfImport
+	where CommodityCode = @CommodityCode
+
   UPDATE EnterCoupon
   SET CommodityCode  = @CommodityCode,
   EmployeeCode = @EmployeeCode,
   DateOfImport = @DateOfImport,
   NumberOfImport = @NumberOfImport
   WHERE EnterCouponCode = @EnterCouponCode
+
 END
 GO
 
@@ -102,8 +134,8 @@ CREATE PROCEDURE SP_HangHoa_Insert
   
 AS
 BEGIN
-  INSERT INTO Commodity(CommodityName,DateOfManufacture,ExpiryDate,ProducerCode)
-  VALUES(@CommodityName,@DateOfManufacture,@ExpiryDate,@ProducerCode)
+  INSERT INTO Commodity(CommodityName,DateOfManufacture,ExpiryDate,ProducerCode,Amount)
+  VALUES(@CommodityName,@DateOfManufacture,@ExpiryDate,@ProducerCode,0)
 END
 GO
 
@@ -132,8 +164,6 @@ BEGIN
 	  DateOfManufacture=@DateOfManufacture,
 	  ExpiryDate=@ExpiryDate,
 	  ProducerCode=@ProducerCode
-	
-  
   WHERE CommodityCode = @CommodityCode
 END
 GO
@@ -203,6 +233,11 @@ BEGIN
   INSERT INTO Bill
     (CommodityCode, EmployeeCode, DateOfExport, NumberOfExport)
   VALUES(@CommodityCode,@EmployeeCode, @DateOfExport, @NumberOfExport)
+
+  
+	Update Commodity
+	set Amount = Amount - @NumberOfExport
+	where CommodityCode = @CommodityCode
 END
 GO
 
@@ -210,6 +245,18 @@ CREATE PROCEDURE SP_Bill_Delete
   @BillCode INT
 AS
 BEGIN
+	
+	declare @Sl int; 
+	set @Sl=(select Bill.NumberOfExport from Bill where BillCode = @BillCode )
+
+	declare @CommodityCode1 int;
+	set @CommodityCode1=(select Bill.BillCode from Bill where BillCode = @BillCode )
+
+	Update Commodity
+	set Amount = Amount + @Sl
+	where CommodityCode = @CommodityCode1
+
+
   DELETE Bill
   WHERE BillCode = @BillCode
 END
@@ -223,6 +270,18 @@ CREATE PROCEDURE SP_Bill_Update
   @NumberOfExport INT
 AS
 BEGIN
+	
+	declare @Sl int; 
+	set @Sl=(select Bill.NumberOfExport from Bill where BillCode = @BillCode )
+
+	declare @CommodityCode1 int;
+	set @CommodityCode1=(select Bill.BillCode from Bill where BillCode = @BillCode )
+
+	Update Commodity
+	set Amount = Amount + @Sl - @NumberOfExport
+	where CommodityCode = @CommodityCode
+
+
   UPDATE Bill
   SET CommodityCode = @CommodityCode,
 	  EmployeeCode = @EmployeeCode,
@@ -275,9 +334,7 @@ BEGIN
     OR ProducerCode LIKE N'%' + @searchValue + '%'
 END   
 GO
-<<<<<<< HEAD
->>>>>>> origin/quynh
-=======
+
 
 ---------------- Văn ----------------
 
@@ -435,4 +492,13 @@ begin
 	  ELSE
 		SELECT 0;
 end
+
+create proc GetCommodityList
+as
+begin
+	select *
+	from Commodity
+	where Amount > 0
+end
+go
 
